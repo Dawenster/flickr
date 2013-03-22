@@ -12,4 +12,8 @@ configure do
   set :views, File.join(Sinatra::Application.root, "app", "views")
 end
 
+CarrierWave.configure do |config|
+  config.root = APP_ROOT
+end
+
 run Sinatra::Application

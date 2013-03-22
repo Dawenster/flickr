@@ -15,9 +15,10 @@ require 'pg'
 require 'active_record'
 require 'logger'
 require 'bcrypt'
-
 require 'carrierwave'
+require 'carrierwave/orm/activerecord'
 require 'mini_magick'
+
 
 require 'sinatra'
 require "sinatra/reloader" if development?

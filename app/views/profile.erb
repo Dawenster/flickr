@@ -3,8 +3,13 @@
 <ul>
   <% @user.albums.each do |album| %>
     <li><a href="/album/<%= album.id %>"><%= album.title %></a></li>
-    <% if album.photos.first %><img src="/uploads/<%= album.photos.first.url %>"><% end %>
+    <% if album.photos.first %><img src="/uploads/<%= album.photos.first.image.identifier! %>"><% end %>
   <% end %>
 </ul>
 
-
+<ul>
+  <% @user.albums.each do |album| %>
+    <li><a href="/album/<%= album.id %>"><%= album.title %></a></li>
+    <% if album.photos.first %><img src="/uploads/<%= album.photos.last.image.thumb.identifier! %>"><% end %>
+  <% end %>
+</ul>

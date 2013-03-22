@@ -1,5 +1,4 @@
 class Photo < ActiveRecord::Base
-  validates :url, :presence => true
-  validates :url, :uniqueness => true
+  mount_uploader :image, PicUploader
   belongs_to :album
 end

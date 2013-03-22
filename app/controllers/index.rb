@@ -4,7 +4,3 @@ get '/' do
 end
 
 
-
-get '/public/uploads/:url' do
-  @params[:url]
-end

@@ -2,6 +2,6 @@
 
 <ul>
   <% @photos.each do |photo| %>
-  <li><a href="/uploads/<%= photo.url %>"><img src="/uploads/<%= photo.url %>"></a></li>
+  <li><a href="/uploads/<%= photo.image.identifier! %>"><img src="/uploads/<%= photo.image.identifier! %>"></a></li>
   <% end %>
 </ul>
