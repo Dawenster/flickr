@@ -1,7 +1,7 @@
 <h1>Album: <%= @album.title %></h1>
 
-<ul>
+<ul id="album">
   <% @photos.each do |photo| %>
-  <li><a href="/uploads/<%= photo.image.identifier! %>"><img src="/uploads/<%= photo.image.identifier! %>"></a></li>
+  <li><a href="/uploads/<%= photo.image.identifier! %>"><img src="/uploads/<%= photo.image.thumb.identifier! %>"></a></li>
   <% end %>
 </ul>

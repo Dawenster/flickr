@@ -1,18 +1,23 @@
-<a href="/">Home</a>
+<nav>
+  
 
-<% if @user %>
-  <a href="/album/new">Create Album</a>
-  <a href="/photo/new">Add Photo</a>
-  <a href="/user/logout">Logout</a>
-  <a href="/user/profile">Profile</a>
+  <% if @user %>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/album/new">Create Album</a></li>
+    <li><a href="/photo/new">Add Photo</a></li>
+    <li><a href="/user/logout">Logout</a></li>
+    <li><a href="/user/profile">Profile</a></li>
+  </ul>
 
-<% else %>
+  <% else %>
 
-  <a href="/user/signup">Sign Up</a>
-  <form action="/user/login" method="post">
-    <input type="email" name="email" placeholder="Email">
-    <input type="password" name="password" placeholder="Password">
-    <input type="submit" value="Login">
-  </form>
+    <a href="/user/signup">Sign Up</a>
+    <form action="/user/login" method="post">
+      <input type="email" name="email" placeholder="Email">
+      <input type="password" name="password" placeholder="Password">
+      <input type="submit" value="Login">
+    </form>
 
-<% end %>
+  <% end %>
+</nav>

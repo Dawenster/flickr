@@ -7,11 +7,15 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/main.css">
 
   <title></title>
 </head>
 <body>
   <%= erb :_navigation %>
-  <%= yield %>
+  <div class="container">
+    
+    <%= yield %>
+  </div>
 </body>
 </html>
