@@ -9,11 +9,13 @@ gem 'sinatra-contrib'
 
 # Use Thin for our web server
 gem 'thin'
-
+gem 'carrierwave'
+gem 'mini_magick'
 gem 'activesupport'
 gem 'activerecord'
-
 gem 'rake'
+
+gem 'bcrypt-ruby'
 
 group :test do
   gem 'faker'

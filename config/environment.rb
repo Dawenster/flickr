@@ -10,10 +10,14 @@ require 'rubygems'
 
 require 'uri'
 require 'pathname'
-
+require 'securerandom'
 require 'pg'
 require 'active_record'
 require 'logger'
+require 'bcrypt'
+
+require 'carrierwave'
+require 'mini_magick'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
@@ -24,6 +28,10 @@ require 'erb'
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
 APP_NAME = APP_ROOT.basename.to_s
+
+CarrierWave.configure do |config|
+  # your configuration code goes here
+end
 
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }

@@ -1,0 +1,18 @@
+<a href="/">Home</a>
+
+<% if @user %>
+  <a href="/album/new">Create Album</a>
+  <a href="/photo/new">Add Photo</a>
+  <a href="/user/logout">Logout</a>
+  <a href="/user/profile">Profile</a>
+
+<% else %>
+
+  <a href="/user/signup">Sign Up</a>
+  <form action="/user/login" method="post">
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Login">
+  </form>
+
+<% end %>

@@ -1,0 +1,10 @@
+<h1>Hello <%= @user.name %> </h1>
+
+<ul>
+  <% @user.albums.each do |album| %>
+    <li><a href="/album/<%= album.id %>"><%= album.title %></a></li>
+    <% if album.photos.first %><img src="/uploads/<%= album.photos.first.url %>"><% end %>
+  <% end %>
+</ul>
+
+

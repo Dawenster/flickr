@@ -1,0 +1,13 @@
+<h1>Add a photo!</h1>
+
+<form action="/photo/new" enctype="multipart/form-data" method="post">
+  <select name="album_id">
+    <% @albums.each do |album| %>
+    <option value="<%= album.id %>"><%= album.title %></option>
+    <% end %>
+  </select>
+  <input type="file" name="filename">
+  <input type="submit" value="Upload dis shizzle!" >
+</form>
+
+<%= @message if @message %>

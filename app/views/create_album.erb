@@ -1,0 +1,10 @@
+<h1>Create Album</h1>
+
+<% if @album %>
+  <p>You just created the album: <%= @album.title %></p>
+<% end %>
+
+<form action="/album/new" method="post">
+  <input type="text" name="title" placeholder="Title your album!">
+  <input type="submit" value="Create!">
+</form>
